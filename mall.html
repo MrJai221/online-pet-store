@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Shopping Mall</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Online Pet Shopping Mall</h1>
+    </header>
+
+    <main>
+        <section class="directory">
+            <h2>Store Directory</h2>
+            <ul class="directory-list">
+                <li data-url="https://www.petstore1.com">Pet Food & Supplies</li>
+                <li data-url="https://www.petstore2.com">Pet Toys & Accessories</li>
+                <li data-url="https://www.petstore3.com">Pet Grooming Services</li>
+                <li data-url="https://www.petstore4.com">Pet Adoption & Rescue</li>
+                <li data-url="https://www.petstore5.com">Veterinary Services</li>
+                <li data-url="https://www.petstore6.com">Pet Training & Behavior</li>
+                <li data-url="https://www.petstore7.com">Pet Clothing & Apparel</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Online Pet Shopping Mall. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const directoryItems = document.querySelectorAll('.directory-list li');
+        
+            directoryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const url = this.getAttribute('data-url');
+                    if (url) {
+                        window.open(url, '_blank');
+                    }
+                });
+            });
+        });
+        
+    </script>
+</body>
+</html>
